@@ -1,25 +1,25 @@
 class Cmdq < Formula
   desc "A PTY-hosted command queue: type the next command while one is still running."
   homepage "https://github.com/ParthJadhav/cmdq"
-  version "0.1.3"
+  version "0.1.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.1.3/cmdq-aarch64-apple-darwin.tar.xz"
-      sha256 "31fa978adbb1dff32698a843fc06f4fec51f7b5bf6c01b100af7ec9b30af53ee"
+      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.1.4/cmdq-aarch64-apple-darwin.tar.xz"
+      sha256 "a3a14cbdd70ec4aca0414192d7da4d74d009aa9b8813ecc774cfd065d4b95642"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.1.3/cmdq-x86_64-apple-darwin.tar.xz"
-      sha256 "22aadbb01d5d3ca2bf7eb4074bd367d7c57cf485b8becb8825c9ce7d0bc996fb"
+      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.1.4/cmdq-x86_64-apple-darwin.tar.xz"
+      sha256 "4e2188120cb62c7acb3af02bcb43db2ae0ee9d542a55ed59d3b0cd4a4d85b299"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.1.3/cmdq-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4cc61de911b47598f947d8d9496079885b62054362465f72a923ede3d8db5c98"
+      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.1.4/cmdq-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "17c4189e3a3fdbe41b2b05d7cd4d994f4f9366e14545f22f0043f0d77f5116cb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.1.3/cmdq-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0961433a0da4528586e8651e54be661b72705d00584ceaccefafe661ebbeb326"
+      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.1.4/cmdq-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4d35995c628ad175205ebacf7dabe60cfe6c31fd26e9c1dbdd155fb6653afc6b"
     end
   end
   license "MIT"
