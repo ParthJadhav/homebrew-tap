@@ -14,6 +14,14 @@ Then install any formula:
 brew install ParthJadhav/tap/cmdq
 ```
 
+Private-source formulae may require GitHub credentials:
+
+```bash
+gh auth login
+gh auth setup-git
+```
+
 ## Available formulas
 
 - [`cmdq`](https://github.com/ParthJadhav/cmdq) — type the next command while one is still running
+- [`vid-cli`](https://github.com/ParthJadhav/vid-cli) — create short reels from folders of images and videos
