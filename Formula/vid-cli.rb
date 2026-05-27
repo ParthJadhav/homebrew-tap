@@ -3,9 +3,9 @@ class VidCli < Formula
   homepage "https://github.com/ParthJadhav/vid-cli"
   version "0.1.1"
 
-  github_token = ENV["HOMEBREW_GITHUB_API_TOKEN"]
+  github_token = Homebrew::EnvConfig.github_api_token
   github_headers = ["Accept: application/octet-stream"]
-  github_headers << "Authorization: Bearer #{github_token}" unless github_token.to_s.empty?
+  github_headers << "Authorization: token #{github_token}" unless github_token.to_s.empty?
 
   if OS.mac?
     if Hardware::CPU.arm?
