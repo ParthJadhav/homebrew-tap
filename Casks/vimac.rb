@@ -1,6 +1,6 @@
 cask "vimac" do
   version "0.1.0"
-  sha256 "03ad84fc7cbaca0282cf47dd2baf014974e88f945e477b184589ee65869148ff"
+  sha256 "6c91dcf9aba85a1e143acdabd83d39bfdf603c84034af856a59b2d3812fba270"
 
   url "https://github.com/ParthJadhav/vimac-modern/releases/download/v#{version}/Vimac-#{version}.zip",
       verified: "github.com/ParthJadhav/vimac-modern/"
