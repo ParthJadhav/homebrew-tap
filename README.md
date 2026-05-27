@@ -21,6 +21,8 @@ gh auth login
 gh auth setup-git
 ```
 
+Formulae that support optional URL downloads may need extra tools. For example, install `yt-dlp` if you want `vid-cli --song` to accept YouTube/video URLs.
+
 ## Available formulas
 
 - [`cmdq`](https://github.com/ParthJadhav/cmdq) — type the next command while one is still running

@@ -8,7 +8,6 @@ class VidCli < Formula
 
   depends_on "rust" => :build
   depends_on "ffmpeg"
-  depends_on "yt-dlp"
 
   def install
     system "cargo", "install", *std_cargo_args
