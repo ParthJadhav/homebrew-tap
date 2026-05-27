@@ -19,6 +19,7 @@ Private-source formulae may require GitHub credentials:
 ```bash
 gh auth login
 gh auth setup-git
+export HOMEBREW_GITHUB_API_TOKEN="$(gh auth token)"
 ```
 
 Formulae that support optional URL downloads may need extra tools. For example, install `yt-dlp` if you want `vid-cli --song` to accept YouTube/video URLs.
