@@ -26,6 +26,10 @@ class ReelCli < Formula
     pkgshare.install "README.md" if File.exist?("README.md")
   end
 
+  def post_install
+    system "#{bin}/reel-cli", "--doctor"
+  end
+
   test do
     assert_match version.to_s, shell_output("#{bin}/reel-cli --version")
     system "#{bin}/reel-cli", "--doctor"
