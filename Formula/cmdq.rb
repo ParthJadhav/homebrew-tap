@@ -1,25 +1,25 @@
 class Cmdq < Formula
   desc "A PTY-hosted command queue: type the next command while one is still running."
   homepage "https://github.com/ParthJadhav/cmdq"
-  version "0.1.6"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.1.6/cmdq-aarch64-apple-darwin.tar.xz"
-      sha256 "839bc07e6a008ec0606bd3d9c150855c0ad0d77e89a5174c03a27b1a5aabc7f1"
+      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.2.0/cmdq-aarch64-apple-darwin.tar.xz"
+      sha256 "6d585732cf6655e4a00363cdc3cd1e3ffa1190816831e0557b484eccb83e3ced"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.1.6/cmdq-x86_64-apple-darwin.tar.xz"
-      sha256 "74fda1ee5bc7c0eee4b016ddaa9248da23e710a6d16bc1c1cc0e5546bd3acc6c"
+      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.2.0/cmdq-x86_64-apple-darwin.tar.xz"
+      sha256 "cd617b68406f00421fb31949b793cef162af94789c0e1b9b2771fa2bc8c0365b"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.1.6/cmdq-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e4d988503f6c9f927c4ed22f30e82c04d4d83cc9a900af3290cfd0fb9a63a216"
+      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.2.0/cmdq-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "a78c0480d324cd99b014a817a010b98fd60409728eb9fce824b5ce3f44776314"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.1.6/cmdq-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "65bcdb0ddcc4e7b55eab09a352eae4dafdf7ea4df2839d113adfb83b51436e71"
+      url "https://github.com/ParthJadhav/cmdq/releases/download/v0.2.0/cmdq-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "acd52ddd3fb2b56a29ea0b149f020ec58985948cb6ada11482266e875ae96128"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class Cmdq < Formula
   end
 
   def install
-    bin.install "cmdq" if OS.mac? && Hardware::CPU.arm?
-    bin.install "cmdq" if OS.mac? && Hardware::CPU.intel?
-    bin.install "cmdq" if OS.linux? && Hardware::CPU.arm?
-    bin.install "cmdq" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "cmdq"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "cmdq"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "cmdq"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "cmdq"
+    end
 
     install_binary_aliases!
 
